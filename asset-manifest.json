@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/memory-card-app/static/css/main.4c163fba.chunk.css",
+    "main.js": "/memory-card-app/static/js/main.158ee5e5.chunk.js",
+    "main.js.map": "/memory-card-app/static/js/main.158ee5e5.chunk.js.map",
+    "runtime-main.js": "/memory-card-app/static/js/runtime-main.cc55c90d.js",
+    "runtime-main.js.map": "/memory-card-app/static/js/runtime-main.cc55c90d.js.map",
+    "static/js/2.1832e01d.chunk.js": "/memory-card-app/static/js/2.1832e01d.chunk.js",
+    "static/js/2.1832e01d.chunk.js.map": "/memory-card-app/static/js/2.1832e01d.chunk.js.map",
+    "static/js/3.8242c475.chunk.js": "/memory-card-app/static/js/3.8242c475.chunk.js",
+    "static/js/3.8242c475.chunk.js.map": "/memory-card-app/static/js/3.8242c475.chunk.js.map",
+    "index.html": "/memory-card-app/index.html",
+    "static/css/main.4c163fba.chunk.css.map": "/memory-card-app/static/css/main.4c163fba.chunk.css.map",
+    "static/js/2.1832e01d.chunk.js.LICENSE.txt": "/memory-card-app/static/js/2.1832e01d.chunk.js.LICENSE.txt",
+    "static/media/image1.d4031728.jpg": "/memory-card-app/static/media/image1.d4031728.jpg",
+    "static/media/image10.eb9ad3b1.jpg": "/memory-card-app/static/media/image10.eb9ad3b1.jpg",
+    "static/media/image11.af7cf68c.jpg": "/memory-card-app/static/media/image11.af7cf68c.jpg",
+    "static/media/image12.21b3c017.jpg": "/memory-card-app/static/media/image12.21b3c017.jpg",
+    "static/media/image13.efc0e605.jpg": "/memory-card-app/static/media/image13.efc0e605.jpg",
+    "static/media/image14.1c252fea.jpg": "/memory-card-app/static/media/image14.1c252fea.jpg",
+    "static/media/image15.facb0e4a.jpg": "/memory-card-app/static/media/image15.facb0e4a.jpg",
+    "static/media/image16.6f06f1ee.jpg": "/memory-card-app/static/media/image16.6f06f1ee.jpg",
+    "static/media/image17.1c4c858f.jpg": "/memory-card-app/static/media/image17.1c4c858f.jpg",
+    "static/media/image2.cea564ee.jpg": "/memory-card-app/static/media/image2.cea564ee.jpg",
+    "static/media/image3.2fc28bcf.jpg": "/memory-card-app/static/media/image3.2fc28bcf.jpg",
+    "static/media/image4.553d6ef1.jpg": "/memory-card-app/static/media/image4.553d6ef1.jpg",
+    "static/media/image5.a4956958.jpg": "/memory-card-app/static/media/image5.a4956958.jpg",
+    "static/media/image6.fab721b2.jpg": "/memory-card-app/static/media/image6.fab721b2.jpg",
+    "static/media/image7.ca95f50b.jpg": "/memory-card-app/static/media/image7.ca95f50b.jpg",
+    "static/media/image8.60ac6a8f.jpg": "/memory-card-app/static/media/image8.60ac6a8f.jpg",
+    "static/media/image9.4a165a3e.jpg": "/memory-card-app/static/media/image9.4a165a3e.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cc55c90d.js",
+    "static/js/2.1832e01d.chunk.js",
+    "static/css/main.4c163fba.chunk.css",
+    "static/js/main.158ee5e5.chunk.js"
+  ]
+}
