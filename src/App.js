@@ -43,6 +43,13 @@ const App = () => {
     prevArrRef.current = imagesArr;
   })
 
+  const resetGame = () => {
+    setBestScore(0);
+    setCurrentScore(0);
+    setFeedback('')
+    setPickedImages([]);
+  }
+
   const clickHandler = id => {
     if (pickedImages.includes(id)) {
       setFeedback('Oh no, you already picked that :/');
@@ -76,11 +83,12 @@ const App = () => {
     }
   }
 
+  // grab 3 images
   const imagesArr = grabSetOfImages();
 
   return (
     <div className="bg-blue-50 min-h-screen">
-      <Navbar />
+      <Navbar resetGame={resetGame}/>
       <Banner currentScore={currentScore} bestScore={bestScore} feedback={feedback} feedbackSpacing={feedbackSpacing} />
       <div className="flex items-center justify-center my-10 space-x-8">
         {
