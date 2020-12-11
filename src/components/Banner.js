@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Banner = ({currentScore, bestScore}) => {
+const Banner = ({currentScore, bestScore, feedback, feedbackSpacing }) => {
   return (
     <div className="max-w-lg mx-auto flex p-6 bg-gray-100 mt-10 rounded-lg shadow-xl">
       <div className="ml-6 pt-1">
@@ -14,6 +14,9 @@ const Banner = ({currentScore, bestScore}) => {
           <span className='text-gray-700'>Current score: {currentScore} </span>
           <span className='text-gray-700'>Best score: {bestScore} </span>
         </div>
+        <p className={`text-lg font-bold text-blue-900 leading-normal my-3 ${feedbackSpacing} fancy-transition`}>
+          {feedback}
+        </p>
       </div>
     </div>
   )

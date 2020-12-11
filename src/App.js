@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Banner from './components/Banner'
 import Footer from './components/Footer'
@@ -34,15 +34,24 @@ const App = () => {
   const [ pickedImages, setPickedImages ] = useState([]);
   const [ currentScore, setCurrentScore ] = useState(0);
   const [ bestScore, setBestScore ] = useState(currentScore);
+  const [ feedback, setFeedback ] = useState('');
+  const [ feedbackSpacing, setFeedbackSpacing ] = useState('text-left');
+
+  // set up prev arr
+  const prevArrRef = useRef();
+  useEffect( () => {
+    prevArrRef.current = imagesArr;
+  })
 
   const clickHandler = id => {
     if (pickedImages.includes(id)) {
-      alert('LOOOOOSER');
+      setFeedback('Oh no, you already picked that :/');
       currentScore > bestScore && setBestScore(currentScore);
       setCurrentScore(0);
       setPickedImages([]);
     } else {
-      alert(' GOOD GUESS!');
+      setFeedback('GOOD GUESS!');
+      feedbackSpacing === 'text-left' ? setFeedbackSpacing('text-right') : setFeedbackSpacing('text-left') ;
       setCurrentScore(currentScore + 1);
       setPickedImages(pickedImages => [...pickedImages, id]);
     }
@@ -51,10 +60,14 @@ const App = () => {
   const grabSetOfImages = () => {
     while (true) {
       const imagesArr = [];
-      // checker to not add same image in lineup
+
       while (imagesArr.length < 3) {
         let image = images[Math.floor(Math.random() * images.length)];
-        !imagesArr.includes(image) && imagesArr.push(image);
+        // checker to not add same image twice
+        // and image not in prevArr
+        prevArrRef.current === undefined ?
+          !imagesArr.includes(image) && imagesArr.push(image) :
+          !prevArrRef.current.includes(image) && !imagesArr.includes(image) && imagesArr.push(image) ;
       }
       // checker to see if at least one image has not been picked yet
       for (let image of imagesArr) {
@@ -63,12 +76,12 @@ const App = () => {
     }
   }
 
-  const imagesArr = grabSetOfImages()
+  const imagesArr = grabSetOfImages();
 
   return (
     <div className="bg-blue-50 min-h-screen">
       <Navbar />
-      <Banner currentScore={currentScore} bestScore={bestScore} />
+      <Banner currentScore={currentScore} bestScore={bestScore} feedback={feedback} feedbackSpacing={feedbackSpacing} />
       <div className="flex items-center justify-center my-10 space-x-8">
         {
           imagesArr.map( image => {

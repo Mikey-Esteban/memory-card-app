@@ -21,7 +21,7 @@ const Card = ({src, id, onClick}) => {
   }
 
   return (
-    <div className="bg-white border rounded-lg overflow-hidden card-container"
+    <div className="bg-white border rounded-lg overflow-hidden card-container fancy-transition"
       id={id}>
       <img className="h-96 min-w-full" src={src} alt=""
         onClick={ () => onClick(id) }
